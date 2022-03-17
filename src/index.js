@@ -1,3 +1,16 @@
+// Wait for DOM to fully load before executing JS
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listener to submit button
+  document
+    .querySelector(".btn-primary")
+    .addEventListener("click", submitAction);
+});
+
+function submitAction() {
+  event.preventDefault();
+  console.log("clicked");
+}
+
 function quoteCardConstructor(quote, footer, likes) {
   const li = document.createElement("li");
   const blockQuote = document.createElement("blockquote");
